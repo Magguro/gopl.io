@@ -28,6 +28,7 @@ func test_echo1(args []string) {
 		s += sep + args[i]
 		sep = " "
 	}
+	// fmt.Println(s)
 }
 
 func test_echo2(args []string) {
@@ -39,14 +40,14 @@ func test_echo2(args []string) {
 	// fmt.Println(s)
 }
 
+func test_echo3(args []string) {
+	strings.Join(args[1:], " ")
+}
+
 func BenchmarkEcho1(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		test_echo1(args)
 	}
-}
-
-func test_echo3(args []string) {
-	strings.Join(args[1:], " ")
 }
 
 func BenchmarkEcho2(b *testing.B) {
