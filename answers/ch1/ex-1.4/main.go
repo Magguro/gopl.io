@@ -13,6 +13,14 @@ import (
 	"os"
 )
 
+func countLines(f *os.File, counts map[string][]string) {
+	input := bufio.NewScanner(f)
+	for input.Scan() {
+		counts[input.Text()] = append(counts[input.Text()], f.Name())
+	}
+	// NOTE: ignoring potential errors from input.Err()
+}
+
 func main() {
 	counts := make(map[string][]string)
 	files := os.Args[1:]
@@ -34,12 +42,4 @@ func main() {
 			fmt.Printf("%d\t%s\t%s\n", len(files), line, files)
 		}
 	}
-}
-
-func countLines(f *os.File, counts map[string][]string) {
-	input := bufio.NewScanner(f)
-	for input.Scan() {
-		counts[input.Text()] = append(counts[input.Text()], f.Name())
-	}
-	// NOTE: ignoring potential errors from input.Err()
 }
