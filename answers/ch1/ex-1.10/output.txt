@@ -1,0 +1,17 @@
+0.12s    21750  https://nemkovich.by
+0.15s     7684  https://ozon.ru
+0.17s   508993  https://onliner.by
+0.25s    60073  https://go.dev
+0.57s     4154  https://gopl.io
+
+0.11s     7664  https://ozon.ru
+0.12s    21750  https://nemkovich.by
+0.14s   509008  https://onliner.by
+0.27s    60073  https://go.dev
+0.68s     4154  https://gopl.io
+
+0.16s     7684  https://ozon.ru
+0.19s    21750  https://nemkovich.by
+0.26s   509119  https://onliner.by
+0.32s    60073  https://go.dev
+0.61s     4154  https://gopl.io
